@@ -45,14 +45,15 @@ input[type="text"], input[type="password"] {
     border: 1px solid #ddd;
     border-radius: 10px;
     font-size: 16px;
-    background-color: rgba(240, 240, 240, 0.7); 
+    background-color: rgba(240, 240, 240, 0.7); /* Slightly more opaque */
     transition: all 0.3s ease-in-out;
 }
 
 input[type="text"]:focus, input[type="password"]:focus {
     border-color: rgb(40, 227, 208);
     box-shadow: 0 0 8px rgba(40, 227, 208, 0.5);
-    background-color: rgba(240, 240, 240, 1); 
+    background-color: rgba(240, 240, 240, 1); /* Fully opaque on focus */
+}
 
 .remember-forgot {
     display: flex;
@@ -85,7 +86,8 @@ input[type="text"]:focus, input[type="password"]:focus {
 
 .login-btn:hover {
     background: linear-gradient(to bottom, rgb(30, 200, 180), rgb(40, 227, 208));
-    transform: scale(1.05); 
+    transform: scale(1.05); /* Slightly larger on hover */
+}
 
 .register-link {
     margin-top: 20px;
@@ -113,5 +115,6 @@ input[type="text"]:focus, input[type="password"]:focus {
     }
     
 }
-}
+.error-message{
+    color:red;
 }
