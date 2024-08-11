@@ -36,11 +36,6 @@
                 <label><input type="radio" name="role" value="pharmacy" required> Pharmacy</label>
                 <small class="error-message" id="role-error"></small>
             </div>
-            <div class="input-group">
-                <label for="proof">Upload Proof</label>
-                <input type="file" id="proof" required>
-                <small class="error-message" id="proof-error"></small>
-            </div>
             <div class="input-group terms">
                 <input type="checkbox" id="terms" required>
                 <label for="terms">I read and agree to Terms & Conditions</label>
@@ -48,9 +43,9 @@
             </div>
             <button type="submit" class="create-account">Create Account</button>
             <p>Already have an account? <a href="s.html"><u>Login</u></a></p>
+            <small class="error-message" id="signup-error"></small>
         </form>
     </div>
-
-    <script src="validation.js"></script>
+    <script type="module" src="signup.js"></script>
 </body>
 </html>
