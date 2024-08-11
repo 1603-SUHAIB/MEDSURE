@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('C:/Users/Lenovo/Downloads/10174056_8702.jpg');
+    background-image: url('https://img.freepik.com/free-vector/worker-watching-conveyor-with-boxes-isolated-flat-vector-illustration-cartoon-man-standing-warehouse-with-automation-process_74855-8702.jpg?t=st=1723342273~exp=1723345873~hmac=a7da1cd16a13ea07ebc494dbb1aa0f4c433df24156030ccd7c4259b422b3d3a9&w=1060');
     background-size: cover;
     background-position: center;
 }
@@ -18,7 +18,7 @@ body {
     height: 100%;
 }
 
-.login-box {
+.login-form {
     background-color: rgba(255, 255, 255, 0.9); 
     padding: 40px;
     border-radius: 20px;
@@ -34,11 +34,11 @@ h2 {
     margin-bottom: 20px;
 }
 
-.input-container {
+.input-group {
     margin-bottom: 20px;
 }
 
-input[type="text"], input[type="password"] {
+input[type="email"], input[type="password"] {
     width: 100%;
     padding: 15px;
     margin-top: 8px;
@@ -49,27 +49,10 @@ input[type="text"], input[type="password"] {
     transition: all 0.3s ease-in-out;
 }
 
-input[type="text"]:focus, input[type="password"]:focus {
+input[type="email"]:focus, input[type="password"]:focus {
     border-color: rgb(40, 227, 208);
     box-shadow: 0 0 8px rgba(40, 227, 208, 0.5);
     background-color: rgba(240, 240, 240, 1); /* Fully opaque on focus */
-}
-
-.remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.remember-forgot a {
-    color: rgb(40, 227, 208);
-    text-decoration: none;
-}
-
-.remember-forgot a:hover {
-    text-decoration: underline;
 }
 
 .login-btn {
@@ -89,18 +72,8 @@ input[type="text"]:focus, input[type="password"]:focus {
     transform: scale(1.05); /* Slightly larger on hover */
 }
 
-.register-link {
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.register-link a {
-    color: rgb(40, 227, 208);
-    text-decoration: none;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
+.error-message {
+    color: red;
 }
 
 /* Fade-in animation */
@@ -113,8 +86,4 @@ input[type="text"]:focus, input[type="password"]:focus {
         opacity: 1;
         transform: translateY(0);
     }
-    
-}
-.error-message{
-    color:red;
 }
