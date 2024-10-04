@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedSure - Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <img src="{{ url_for('static', filename='img/app_logo.png') }}" alt="MedSure Logo" class="logo">
+            <h2>Welcome</h2>
+            <div class="input-group">
+                <button class="btn" onclick="location.href='{{ url_for('manulogin') }}'">Manufacturer Login</button>
+                <button class="btn" onclick="location.href='{{ url_for('pharmalogin') }}'">Pharmacy Login</button>
+            </div>
+            <p>New User? <a href="signup.html">Sign up</a></p>
+        </div>
+        <div class="illustration">
+            <img src="{{ url_for('static', filename='img/home_img.png') }}" alt="Pharmacy Illustration">
+        </div>
+    </div>
+</body>
+</html>

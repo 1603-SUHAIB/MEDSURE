@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedSure - Manufacturer Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/manudash.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='img/app_logo.png') }}" alt="App Logo" class="app-logo">
+                <p class="tagline">Ensuring authenticity, One scan at a time</p>
+            </div>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#upload-medicine">Upload Medicine Data</a></li>
+                <li><a href="#view-products">View Uploaded Products</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <section id="upload-medicine" class="section">
+                <h3>Upload Medicine Data</h3>
+                <form id="upload-form" action="{{ url_for('generate') }}" method="post">
+                    <label for="name">Medicine Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="batch_number">Batch Number</label>
+                    <input type="text" id="batch_number" name="batch_number" required>
+
+                    <label for="expiry_date">Expiry Date</label>
+                    <input type="date" id="expiry_date" name="expiry_date" required>
+
+                    <label for="barcode">Serial Number</label>
+                    <input type="text" id="barcode" name="barcode" required>
+
+                    <button type="submit">Generate QR Code</button>
+
+                    <div id="barcode-area">
+                        {% if qr_image %}
+                            <h2>Generated QR Code</h2>
+                            <!img src="{{ url_for('static', filename='img/' + qr_image) }}" alt="QR Code">
+                            <a href="{{ qr_download_url }}" download id="download-btn">Download QR Code</a>
+                        {% endif %}
+                    </div>
+                </form>
+            </section>
+            <section id="view-products" class="section">
+                <h3>View Uploaded Products</h3>
+                <input type="text" id="search-bar" placeholder="Search by Batch Number, Date, etc.">
+                <ul id="product-list">
+                    <!-- List of uploaded products will be displayed here -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/manudash.js') }}"></script>
+</body>
+</html>
